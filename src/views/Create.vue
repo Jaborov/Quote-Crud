@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-content-center text-center">
     <div class="row g-3">
-      <h1>Create</h1>
+      <h1>Create asdasdasdasdasdas</h1>
       <form class="was-validated" @submit.prevent="submitHandler">
   <div class="mb-3">
     <label for="description" class="form-label">Quote</label>
