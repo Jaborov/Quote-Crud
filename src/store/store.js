@@ -16,8 +16,12 @@ export default createStore({
 
     localStorage.setItem('skills', JSON.stringify(state.skills))
     },
-    deleteQuote(state, skill){
-      const index = state.skills.findIndex(item => item.id === skill.id)
+    showQuote(state, skill){
+        const index = state.skills.findIndex(t => t.id === skill.id)
+        state.skills.open(index, skill)
+    },
+    deleteQuote(state,  id){
+      const index = state.skills.findIndex(item => item.id === id)
       state.skills.splice(index,1)
 
       localStorage.setItem('skills', JSON.stringify(state.skills))
@@ -31,6 +35,9 @@ export default createStore({
     },
     updateQuote({commit}, skill){
       commit('updateQuote', skill)
+    },
+      showQuote({commit}, skill){
+        commit('showQuote', skill)
     },
     deleteQuote({commit}, skill){
       commit('deleteQuote', skill)

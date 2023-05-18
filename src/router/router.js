@@ -11,12 +11,14 @@ const routes = [
     path: '/quotes',
     name: 'quotes',
     component: () => import('../views/List.vue')
-  }, {
-    path: '/quotes/:id',
-    name: 'quote',
-    component: () => import('../views/quote.vue'),
-    props: true
-  },
+  }, 
+ 
+    {
+      path: '/quotes/:id',
+      name: 'modal',
+      component: () => import('../views/OpenQuote.vue'),
+      props:true
+    },
 ]
 
 const router = createRouter({
